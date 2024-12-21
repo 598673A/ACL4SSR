@@ -34,14 +34,16 @@ dns:
   fake-ip-filter:
     - "geosite:google,bing,github,gfw"
   default-nameserver:
-    - 'system'
-  proxy-server-nameserver:
     - 'quic://223.5.5.5'
     - 'tls://1.12.12.12'
+  proxy-server-nameserver:
+    - 'https://1.0.0.1/dns-query'
+    - 'https://94.140.14.140/dns-query'
   nameserver-policy:
     "geosite:private,apple,cn":
-      - 'system'
+      - 'quic://223.5.5.5'
+      - 'tls://1.12.12.12'
   nameserver:
     - 'https://dns.flymc.cc/dns-query'
-    - 'https://dns64.cloudflare-dns.com/dns-query#h3=true'
+    - 'https://dns64.cloudflare-dns.com/dns-query'
 
